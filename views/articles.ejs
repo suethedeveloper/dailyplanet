@@ -1,0 +1,5 @@
+<ul class="list-unstyled">
+  <% articles.forEach(function (article){%>
+    <li><a href="/articles/<%= article.id %>"><%= article.id %>. <%= article.title %></a></li><br>
+  <%}) %>
+</ul>

@@ -1,0 +1,20 @@
+<% include partials/header %>
+
+<br>
+<div class="panel panel-default">
+  <div class="panel-heading text-center"><%= article.title %></div>
+  <div class="panel-body">
+    <%= article.body %>
+    <br><br>
+    <p class="small">
+
+    <a href="/">Back</a>  <% var nextId = article.id+1, prevId = article.id - 1; if (prevId >0){%><a href="/articles/<%= prevId %>">| Previous Article</a>
+     <%} if (nextId <= count){ %> 
+     <a href="/articles/<%= nextId %>">| Next Article</a> <% }  %>
+     </p>
+  </div>
+</div>
+
+<% include partials/footer %>
+
+
