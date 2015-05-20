@@ -15,6 +15,14 @@ app.get("/", function (req, res){
   res.render("site/index", {articles: articles});
 });
 
+app.get("/about", function (req, res){
+  res.render("site/about");
+});
+
+app.get("/contact", function (req, res){
+  res.render("site/contact");
+});
+
 app.get("/articles", function (req, res){
   res.render("site/index", {articles: articles});
 });

@@ -1,5 +1,5 @@
 <ul class="list-unstyled">
   <% articles.forEach(function (article){%>
-    <li><a href="/articles/<%= article.id %>"><%= article.id %>. <%= article.title %></a></li><br>
+    <li><%= article.id %>. <%= article.title %> <a href="/articles/<%= article.id %>">Read full article</a></li><br>
   <%}) %>
 </ul>

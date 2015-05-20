@@ -1,9 +1,15 @@
 <% include ../partials/header %>
 
+<h2>Welcome to Daily Planet News Feeds</h2>
+<br><br>
 <% include ../../views/articles %>
 
 <div>
   <a href="/articles/new">Create new article</a>
 </div>
-
+<script type="text/javascript">
+window.onload=function () {
+    $('#home').addClass('active');
+};
+</script>
 <% include ../partials/footer %>
