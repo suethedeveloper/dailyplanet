@@ -1,6 +1,7 @@
 var express = require("express"),
 app = express(),
 bodyParser = require("body-parser");
+var request = require("request");
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended:true}));
@@ -47,6 +48,12 @@ app.get("/articles/:id", function (req, res){
   });
 });
 
+app.get("/api", function(req, res) {
+  request("http://daretodiscover.herokuapp.com/users", function(error, response, body) {
+    console.log(body);
+  });
+});
+
 app.get('*', function(req, res){
   res.render("404");
 });
@@ -54,6 +61,5 @@ app.get('*', function(req, res){
 app.listen(3000, function(){
   console.log("server starting");
 });
-
 
 
